@@ -42,4 +42,76 @@ public class Livro {
         this.preco = preco;
         this.dataPublicacao = dataPublicacao;
     }
+
+    //Get-Set Id --------------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Long getQuantidadeExemplares() {
+        return quantidadeExemplares;
+    }
+    public void setQuantidadeExemplares(Long quantidadeExemplares) {
+        this.quantidadeExemplares = quantidadeExemplares;
+    }
+
+    public Long getExemplaresDisponiveis() {
+        return exemplaresDisponiveis;
+    }
+    public void setExemplaresDisponiveis(Long exemplaresDisponiveis) {
+        this.exemplaresDisponiveis = exemplaresDisponiveis;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public Instant getDataPublicacao() {
+        return dataPublicacao;
+    }
+    public void setDataPublicacao(Instant dataPublicacao) {
+        this.dataPublicacao = dataPublicacao;
+    }
+    // ----------------------------------------------------------------
 }

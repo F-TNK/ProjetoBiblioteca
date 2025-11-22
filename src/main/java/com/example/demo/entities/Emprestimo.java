@@ -35,4 +35,55 @@ public class Emprestimo {
         this.livro = livro;
         this.usuario = usuario;
     }
+
+    //Get-Set Id --------------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Instant getDataEmprestimo() {
+        return dataEmprestimo;
+    }
+    public void setDataEmprestimo(Instant dataEmprestimo) {
+        this.dataEmprestimo = dataEmprestimo;
+    }
+
+    public Instant getDataDevolucaoPrevista() {
+        return dataDevolucaoPrevista;
+    }
+    public void setDataDevolucaoPrevista(Instant dataDevolucaoPrevista) {
+        this.dataDevolucaoPrevista = dataDevolucaoPrevista;
+    }
+
+    public Instant getDataDevolucaoReal() {
+        return dataDevolucaoReal;
+    }
+    public void setDataDevolucaoReal(Instant dataDevolucaoReal) {
+        this.dataDevolucaoReal = dataDevolucaoReal;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getLivro() {
+        return livro;
+    }
+    public void setLivro(String livro) {
+        this.livro = livro;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+    // ----------------------------------------------------------------
 }

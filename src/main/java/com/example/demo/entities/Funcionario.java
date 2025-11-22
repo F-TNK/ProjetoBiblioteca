@@ -33,4 +33,48 @@ public class Funcionario {
         this.dataAdmissao = dataAdmissao;
         this.salario = salario;
     }
+
+    //Get-Set Id --------------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Long getMatricula() {
+        return matricula;
+    }
+    public void setMatricula(Long matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public Instant getDataAdmissao() {
+        return dataAdmissao;
+    }
+    public void setDataAdmissao(Instant dataAdmissao) {
+        this.dataAdmissao = dataAdmissao;
+    }
+
+    public Double getSalario() {
+        return salario;
+    }
+    public void setSalario(Double salario) {
+        this.salario = salario;
+    }
+    // ----------------------------------------------------------------
 }

@@ -36,4 +36,60 @@ public class Biblioteca {
         this.listaUsuarios = listaUsuarios;
         this.funcionarios = funcionarios;
     }
+
+    //Get-Set Id --------------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    //Get-Set nome
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    //Get-Set endereco
+    public String getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    //Get-Set telefone
+    public String getTelefone() {
+        return telefone;
+    }
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    //Get-Set telefone
+    public String getListaLivros() {
+        return listaLivros;
+    }
+    public void setListaLivros(String listaLivros) {
+        this.listaLivros = listaLivros;
+    }
+
+    //Get-Set telefone
+    public String getListaUsuarios() {
+        return listaUsuarios;
+    }
+    public void setListaUsuarios(String listaUsuarios) {
+        this.listaUsuarios = listaUsuarios;
+    }
+
+    //Get-Set telefone
+    public String getFuncionarios() {
+        return funcionarios;
+    }
+    public void setFuncionarios(String funcionarios) {
+        this.funcionarios = funcionarios;
+    }
 }

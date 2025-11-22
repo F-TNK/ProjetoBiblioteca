@@ -32,4 +32,47 @@ public class Autor {
         this.dataNascimento = dataNascimento;
         this.biografia = biografia;
     }
+
+
+    // Get & Set (recuperar e alterar entidades) de cada um
+    //Get-Set Id ---------------------------------------------------
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    //Get-Set nome
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    //Get-Set Nacionalidade
+    public String getNacionalidade() {
+        return nacionalidade;
+    }
+    public void setNacionalidade(String nacionalidade) {
+        this.nacionalidade = nacionalidade;
+    }
+
+    //Get-Set dataNascimento
+    public Instant getDataNascimento() {
+        return dataNascimento;
+    }
+    public void setDataNascimento(Instant dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    //Get-Set biografia
+    public String getBiografia() {
+        return biografia;
+    }
+    public void setBiografia(String biografia) {
+        this.biografia = biografia;
+    }
+    // -------------------------------------------------------------------
 }
