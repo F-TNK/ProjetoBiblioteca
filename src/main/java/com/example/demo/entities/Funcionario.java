@@ -5,6 +5,7 @@ import java.time.Instant;
 
 public class Funcionario {
 
+    private Long id;
     private String nome;
     private Long matricula;
     private String cargo;
