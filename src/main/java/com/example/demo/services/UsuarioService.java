@@ -14,7 +14,7 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository repository;
 
-    public List<Usuario> findall(){ return repository.findAll();}
+    public List<Usuario> findAll(){ return repository.findAll();}
 
     public Usuario findById(Long id) {
         Optional<Usuario> obj = repository.findById(id);

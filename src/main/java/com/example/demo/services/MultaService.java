@@ -15,7 +15,7 @@ public class MultaService {
     @Autowired
     private MultaRepository repository;
 
-    public List<Multa> findall(){ return repository.findAll();}
+    public List<Multa> findAll(){ return repository.findAll();}
 
     public Multa findById(Long id) {
         Optional<Multa> obj = repository.findById(id);

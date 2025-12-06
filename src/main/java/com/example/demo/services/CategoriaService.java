@@ -14,7 +14,7 @@ public class CategoriaService {
     @Autowired
     private CategoriaRepository repository;
 
-    public List<Categoria> findall(){ return repository.findAll();}
+    public List<Categoria> findAll(){ return repository.findAll();}
 
     public Categoria findById(Long id) {
         Optional<Categoria> obj = repository.findById(id);

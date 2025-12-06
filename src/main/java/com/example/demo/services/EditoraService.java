@@ -14,7 +14,7 @@ public class EditoraService {
     @Autowired
     private EditoraRepository repository;
 
-    public List<Editora> findall(){ return repository.findAll();}
+    public List<Editora> findAll(){ return repository.findAll();}
 
     public Editora findById(Long id) {
         Optional<Editora> obj = repository.findById(id);

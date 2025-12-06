@@ -14,7 +14,7 @@ public class ReservaService {
     @Autowired
     private ReservaRepository repository;
 
-    public List<Reserva> findall(){ return repository.findAll();}
+    public List<Reserva> findAll(){ return repository.findAll();}
 
     public Reserva findById(Long id) {
         Optional<Reserva> obj = repository.findById(id);

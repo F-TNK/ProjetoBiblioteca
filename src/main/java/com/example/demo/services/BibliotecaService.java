@@ -15,7 +15,7 @@ public class BibliotecaService {
     @Autowired
     private BibliotecaRepository repository;
 
-    public List<Biblioteca> findall(){ return repository.findAll();}
+    public List<Biblioteca> findAll(){ return repository.findAll();}
 
     public Biblioteca findById(Long id) {
         Optional<Biblioteca> obj = repository.findById(id);

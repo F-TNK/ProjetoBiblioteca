@@ -14,7 +14,7 @@ public class AutorService {
     @Autowired
     private AutorRepository repository;
 
-    public List<Autor> findall(){ return repository.findAll();}
+    public List<Autor> findAll(){ return repository.findAll();}
 
     public Autor findById(Long id) {
         Optional<Autor> obj = repository.findById(id);

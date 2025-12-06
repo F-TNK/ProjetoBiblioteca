@@ -14,7 +14,7 @@ public class FuncionarioService {
     @Autowired
     private FuncionarioRepository repository;
 
-    public List<Funcionario> findall(){ return repository.findAll();}
+    public List<Funcionario> findAll(){ return repository.findAll();}
 
     public Funcionario findById(Long id) {
         Optional<Funcionario> obj = repository.findById(id);

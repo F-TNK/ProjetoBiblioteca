@@ -13,7 +13,7 @@ public class LivroService {
 
     private LivroRepository repository;
 
-    public List<Livro> findall(){ return repository.findAll();}
+    public List<Livro> findAll(){ return repository.findAll();}
 
     public Livro findById(Long id) {
         Optional<Livro> obj = repository.findById(id);

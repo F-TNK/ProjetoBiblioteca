@@ -14,7 +14,7 @@ public class EmprestimoService {
     @Autowired
     private EmprestimoRepository repository;
 
-    public List<Emprestimo> findall(){ return repository.findAll();}
+    public List<Emprestimo> findAll(){ return repository.findAll();}
 
     public Emprestimo findById(Long id) {
         Optional<Emprestimo> obj = repository.findById(id);
