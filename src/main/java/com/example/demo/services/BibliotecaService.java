@@ -24,4 +24,15 @@ public class BibliotecaService {
     public Biblioteca insert(Biblioteca obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Biblioteca entity, Biblioteca obj){
+        entity.setEndereco(obj.getEndereco());
+        entity.setFuncionarios(obj.getFuncionarios());
+        entity.setNome(obj.getNome());
+        entity.setTelefone(obj.getTelefone());
+        entity.setListaLivros(obj.getListaLivros());
+        entity.setListaUsuarios(obj.getListaUsuarios());
+    }
 }

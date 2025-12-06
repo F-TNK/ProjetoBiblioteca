@@ -24,4 +24,14 @@ public class EditoraService {
     public Editora insert(Editora obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Editora entity, Editora obj) {
+        entity.setCnpj(obj.getCnpj());
+        entity.setEndereco(obj.getEndereco());
+        entity.setNome(obj.getNome());
+        entity.setTelefone(obj.getTelefone());
+    }
+
 }

@@ -24,4 +24,15 @@ public class FuncionarioService {
     public Funcionario insert(Funcionario obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Funcionario entity, Funcionario obj) {
+        entity.setCargo(obj.getCargo());
+        entity.setDataAdmissao(obj.getDataAdmissao());
+        entity.setNome(obj.getNome());
+        entity.setMatricula(obj.getMatricula());
+        entity.setSalario(obj.getSalario());
+    }
+
 }

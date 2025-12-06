@@ -24,4 +24,13 @@ public class ReservaService {
     public Reserva insert(Reserva obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Reserva entity, Reserva obj) {
+        entity.setLivro(obj.getLivro());
+        entity.setDataReserva(obj.getDataReserva());
+        entity.setStatus(obj.getStatus());
+        entity.setUsuario(obj.getUsuario());
+    }
 }

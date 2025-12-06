@@ -24,4 +24,13 @@ public class CategoriaService {
     public Categoria insert(Categoria obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Categoria entity, Categoria obj) {
+        entity.setDescricao(obj.getDescricao());
+        entity.setNome(obj.getNome());
+        entity.setPago(obj.getPago());
+    }
+
 }

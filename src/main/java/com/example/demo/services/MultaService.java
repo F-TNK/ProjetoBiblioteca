@@ -24,4 +24,13 @@ public class MultaService {
     public Multa insert(Multa obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Multa entity, Multa obj){
+        entity.setDataGeracao(obj.getDataGeracao());
+        entity.setPago(obj.getPago());
+        entity.setMotivo(obj.getMotivo());
+        entity.setValor(obj.getValor());
+    }
 }

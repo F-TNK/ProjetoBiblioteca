@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import com.example.demo.entities.Endereco;
 import com.example.demo.entities.Livro;
 import com.example.demo.repositories.LivroRepository;
 import org.springframework.stereotype.Service;
@@ -21,5 +22,19 @@ public class LivroService {
 
     public Livro insert(Livro obj){
         return repository.save(obj);
+    }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Livro entity, Livro obj) {
+        entity.setAutor(obj.getAutor());
+        entity.setDataPublicacao(obj.getDataPublicacao());
+        entity.setEditora(obj.getEditora());
+        entity.setGenero(obj.getGenero());
+        entity.setExemplaresDisponiveis(obj.getExemplaresDisponiveis());
+        entity.setIsbn(obj.getIsbn());
+        entity.setPreco(obj.getPreco());
+        entity.setQuantidadeExemplares(obj.getQuantidadeExemplares());
+        entity.setTitulo(obj.getTitulo());
     }
 }

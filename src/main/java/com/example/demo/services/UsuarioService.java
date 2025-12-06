@@ -24,4 +24,16 @@ public class UsuarioService {
     public Usuario insert(Usuario obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Usuario entity, Usuario obj) {
+        entity.setCpf(obj.getCpf());
+        entity.setDataCadastro(obj.getDataCadastro());
+        entity.setEmail(obj.getEmail());
+        entity.setNome(obj.getNome());
+        entity.setEmprestimosAtivos(obj.getEmprestimosAtivos());
+        entity.setTelefone(obj.getTelefone());
+        entity.setEndereco(obj.getEndereco());
+    }
 }

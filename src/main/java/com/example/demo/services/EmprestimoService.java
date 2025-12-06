@@ -24,4 +24,16 @@ public class EmprestimoService {
     public Emprestimo insert(Emprestimo obj){
         return repository.save(obj);
     }
+
+    public void delete(Long id) { repository.deleteById(id);}
+
+    private void updateData(Emprestimo entity, Emprestimo obj) {
+        entity.setDataEmprestimo(obj.getDataEmprestimo());
+        entity.setDataDevolucaoPrevista(obj.getDataDevolucaoPrevista());
+        entity.setDataDevolucaoReal(obj.getDataDevolucaoReal());
+        entity.setLivro(obj.getLivro());
+        entity.setStatus(obj.getStatus());
+        entity.setUsuario(obj.getUsuario());
+    }
+
 }
