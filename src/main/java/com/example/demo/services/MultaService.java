@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import com.example.demo.entities.Livro;
 import com.example.demo.entities.Multa;
 import com.example.demo.repositories.MultaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class MultaService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Multa update(Long id, Multa obj) {
+        Multa entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Multa entity, Multa obj){
         entity.setDataGeracao(obj.getDataGeracao());
         entity.setPago(obj.getPago());

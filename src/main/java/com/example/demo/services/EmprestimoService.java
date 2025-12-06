@@ -27,6 +27,11 @@ public class EmprestimoService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Emprestimo update(Long id, Emprestimo obj) {
+        Emprestimo entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Emprestimo entity, Emprestimo obj) {
         entity.setDataEmprestimo(obj.getDataEmprestimo());
         entity.setDataDevolucaoPrevista(obj.getDataDevolucaoPrevista());

@@ -27,6 +27,11 @@ public class EditoraService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Editora update(Long id, Editora obj) {
+        Editora entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Editora entity, Editora obj) {
         entity.setCnpj(obj.getCnpj());
         entity.setEndereco(obj.getEndereco());

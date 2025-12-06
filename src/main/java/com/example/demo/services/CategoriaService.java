@@ -27,6 +27,11 @@ public class CategoriaService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Categoria update(Long id, Categoria obj) {
+        Categoria entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Categoria entity, Categoria obj) {
         entity.setDescricao(obj.getDescricao());
         entity.setNome(obj.getNome());

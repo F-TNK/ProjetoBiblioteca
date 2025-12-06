@@ -1,5 +1,6 @@
 package com.example.demo.services;
 
+import com.example.demo.entities.Autor;
 import com.example.demo.entities.Biblioteca;
 import com.example.demo.repositories.BibliotecaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class BibliotecaService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Biblioteca update(Long id, Biblioteca obj) {
+        Biblioteca entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Biblioteca entity, Biblioteca obj){
         entity.setEndereco(obj.getEndereco());
         entity.setFuncionarios(obj.getFuncionarios());

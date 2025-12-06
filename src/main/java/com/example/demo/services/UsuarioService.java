@@ -27,6 +27,11 @@ public class UsuarioService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Usuario update(Long id, Usuario obj) {
+        Usuario entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Usuario entity, Usuario obj) {
         entity.setCpf(obj.getCpf());
         entity.setDataCadastro(obj.getDataCadastro());

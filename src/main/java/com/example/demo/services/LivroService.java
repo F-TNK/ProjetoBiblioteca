@@ -26,6 +26,11 @@ public class LivroService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Livro update(Long id, Livro obj) {
+        Livro entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Livro entity, Livro obj) {
         entity.setAutor(obj.getAutor());
         entity.setDataPublicacao(obj.getDataPublicacao());

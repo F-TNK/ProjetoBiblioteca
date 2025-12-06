@@ -27,6 +27,11 @@ public class ReservaService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public Reserva update(Long id, Reserva obj) {
+        Reserva entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Reserva entity, Reserva obj) {
         entity.setLivro(obj.getLivro());
         entity.setDataReserva(obj.getDataReserva());

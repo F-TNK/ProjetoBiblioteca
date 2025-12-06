@@ -27,6 +27,11 @@ public class AutorService {
 
     public void delete(Long id) { repository.deleteById(id);}
 
+    public  Autor update(Long id, Autor obj) {
+        Autor entity = repository.getOne(id);
+        updateData(entity, obj);
+        return  repository.save(entity);
+    }
     private void updateData(Autor entity, Autor obj) {
         entity.setBiografia(obj.getBiografia());
         entity.setDataNascimento(obj.getDataNascimento());
