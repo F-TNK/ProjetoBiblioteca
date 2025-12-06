@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReservaService {
@@ -14,4 +15,13 @@ public class ReservaService {
     private ReservaRepository repository;
 
     public List<Reserva> findall(){ return repository.findAll();}
+
+    public Reserva findById(Long id) {
+        Optional<Reserva> obj = repository.findById(id);
+        return obj.get();
+    }
+
+    public Reserva insert(Reserva obj){
+        return repository.save(obj);
+    }
 }

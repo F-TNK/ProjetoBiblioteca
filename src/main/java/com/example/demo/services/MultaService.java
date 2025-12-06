@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MultaService {
@@ -14,4 +15,13 @@ public class MultaService {
     private MultaRepository repository;
 
     public List<Multa> findall(){ return repository.findAll();}
+
+    public Multa findById(Long id) {
+        Optional<Multa> obj = repository.findById(id);
+        return obj.get();
+    }
+
+    public Multa insert(Multa obj){
+        return repository.save(obj);
+    }
 }
